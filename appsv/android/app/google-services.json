@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "587408738490",
+    "project_id": "appsvdatabase",
+    "storage_bucket": "appsvdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587408738490:android:b511afd6f4b67cabfb9a83",
+        "android_client_info": {
+          "package_name": "com.svdata.appsv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587408738490-38fk7r088h550ucrem8kinpb90c8j0i8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj7TnNvCF1r-V_hlffDuI3mo9IfRUp4ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587408738490-38fk7r088h550ucrem8kinpb90c8j0i8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
