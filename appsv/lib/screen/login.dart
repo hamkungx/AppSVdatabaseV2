@@ -1,3 +1,4 @@
+import 'package:appsv/screen/home/home.dart';
 import 'package:appsv/screen/register.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,10 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey formkey = GlobalKey<FormState>();
   final userController = TextEditingController();
   final passController = TextEditingController();
+
+  void NextHome() {
+    Navigator.pushNamed(context, HomePage.page);
+  }
 
   void toRegister() {
     Navigator.pushNamed(context, RegisterPage.page);
@@ -62,7 +67,13 @@ class _LoginPageState extends State<LoginPage> {
               alignment: Alignment.centerRight,
               child:
                   TextButton(onPressed: toRegister, child: Text("Register"))),
-        )
+        ),
+        SizedBox(
+            width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: ElevatedButton(onPressed: NextHome, child: Text("Home")),
+            )),
       ])),
     ));
   }

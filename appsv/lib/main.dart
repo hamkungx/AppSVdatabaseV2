@@ -1,3 +1,4 @@
+import 'package:appsv/screen/home/home.dart';
 import 'package:appsv/screen/login.dart';
 import 'package:appsv/screen/register.dart';
 import 'package:appsv/splash_screen_page.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreenPage.page: (_) => SplashScreenPage(),
         LoginPage.page: (_) => LoginPage(),
-        RegisterPage.page: (_) => RegisterPage()
+        RegisterPage.page: (_) => RegisterPage(),
+        HomePage.page: (_) => HomePage()
       },
     );
   }
