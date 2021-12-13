@@ -68,12 +68,6 @@ class _LoginPageState extends State<LoginPage> {
               child:
                   TextButton(onPressed: toRegister, child: Text("Register"))),
         ),
-        SizedBox(
-            width: double.infinity,
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: ElevatedButton(onPressed: NextHome, child: Text("Home")),
-            )),
       ])),
     ));
   }

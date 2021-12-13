@@ -27,10 +27,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Scaffold(
+        body: Padding(
       padding: const EdgeInsets.all(30.0),
-      child: Scaffold(
-          body: SafeArea(
+      child: SafeArea(
         child: Column(
           children: [
             Center(
@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
             )
           ],
         ),
-      )),
-    );
+      ),
+    ));
   }
 }
