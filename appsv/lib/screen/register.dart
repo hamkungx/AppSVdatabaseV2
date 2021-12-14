@@ -40,7 +40,7 @@ class _RegisterPageState extends State<RegisterPage> {
             )),
             TextField(
               controller: userController,
-              decoration: const InputDecoration(labelText: "Username"),
+              decoration: const InputDecoration(labelText: "Email"),
             ),
             TextField(
                 obscureText: true,

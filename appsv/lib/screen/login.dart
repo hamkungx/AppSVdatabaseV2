@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                         : null;
                   },
                   controller: userController,
-                  decoration: InputDecoration(labelText: "Username"),
+                  decoration: InputDecoration(labelText: "Email"),
                 ),
                 TextFormField(
                   controller: passController,
