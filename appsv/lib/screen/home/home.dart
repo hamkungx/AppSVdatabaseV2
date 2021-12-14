@@ -169,6 +169,13 @@ class _HomePageState extends State<HomePage> {
           leading: Container(),
           leadingWidth: 0,
           title: Text("SVdatabase"),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  authController.sinOut();
+                },
+                icon: Icon(Icons.logout))
+          ],
         ),
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Padding(

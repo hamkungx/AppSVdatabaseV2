@@ -1,3 +1,4 @@
+import 'package:appsv/screen/home/home.dart';
 import 'package:appsv/screen/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -15,9 +16,15 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   void init() async {
     await Firebase.initializeApp();
 
-    await Future.delayed(const Duration(seconds: 1));
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      Navigator.popUntil(context, ModalRoute.withName(SplashScreenPage.page));
 
-    Navigator.pushNamed(context, LoginPage.page);
+      if (user != null) {
+        Navigator.pushNamed(context, HomePage.page);
+      } else {
+        Navigator.pushNamed(context, LoginPage.page);
+      }
+    });
   }
 
   @override

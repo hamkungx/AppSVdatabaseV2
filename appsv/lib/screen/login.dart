@@ -1,4 +1,5 @@
 import 'package:appsv/screen/home/home.dart';
+import 'package:appsv/screen/profile/auth_controller.dart';
 import 'package:appsv/screen/register.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final AuthController authController = AuthController();
   final GlobalKey formkey = GlobalKey<FormState>();
   final userController = TextEditingController();
   final passController = TextEditingController();
+
+  void onLogin() {
+    authController.onLogin(userController.text, passController.text);
+  }
 
   void NextHome() {
     Navigator.pushNamed(context, HomePage.page);
@@ -21,6 +27,13 @@ class _LoginPageState extends State<LoginPage> {
 
   void toRegister() {
     Navigator.pushNamed(context, RegisterPage.page);
+  }
+
+  @override
+  void dispose() {
+    userController.dispose();
+    passController.dispose();
+    super.dispose();
   }
 
   @override
@@ -59,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.all(15.0),
-              child: ElevatedButton(onPressed: () {}, child: Text("Login")),
+              child: ElevatedButton(onPressed: onLogin, child: Text("Login")),
             )),
         Padding(
           padding: const EdgeInsets.all(15.0),
